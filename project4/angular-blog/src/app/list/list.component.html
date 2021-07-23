@@ -1,5 +1,0 @@
-<button id="list-new-button" (click)="newPostFunc();">New Post</button>
-<h2>Posts: </h2>
-<ul>
-    <li id="list-post-{{post.postid}}" (click)="openPostFunc(post.postid);" *ngFor="let post of posts">{{post.title}}  {{toHumanReadable(post.modified)}}</li>
-</ul>
