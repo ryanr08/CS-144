@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Preview Posts</title>
+    </head>
+    <body>
+        <% for(let i = 0; i < titles.length; i++) { %>
+        <div>
+            <%- titles[i] %>
+            <div id="body"><%- bodies[i] %></div>
+        </div>
+        <% } %>
+        <% if (next > 0) { %>
+            <a id="next_link" href="/blog/<%= username %>?start=<%= next %>">next</a>
+        <% } %>
+    </body>
+</html>
