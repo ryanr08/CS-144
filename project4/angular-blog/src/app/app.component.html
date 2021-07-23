@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<app-list [posts]="posts" 
+          (openPost)="openPostHandler($event);" 
+          (newPost)="newPostHandler();"></app-list>
+
+<app-edit [post]="currentPost" 
+          [appstate]="appState"
+          (savePost)="savePostHandler($event);" 
+          (deletePost)="deletePostHandler($event);" 
+          (previewPost)="previewPostHandler($event);"></app-edit>
+
+<app-preview [post]="currentPost" 
+             [appstate]="appState"
+             (editPost)="editPostHandler($event);"></app-preview>

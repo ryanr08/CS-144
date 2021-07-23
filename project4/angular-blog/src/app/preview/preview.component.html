@@ -1,0 +1,5 @@
+<div *ngIf="appstate === 2" class="preview">
+    <div id="preview-title" [innerHTML]="getTitle()"></div>
+    <div id="preview-body" [innerHTML]="getBody()"></div>
+    <button id="preview-edit-button" (click)=editPostFunc(post);>Edit</button>
+</div>
